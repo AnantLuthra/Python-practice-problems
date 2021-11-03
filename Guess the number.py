@@ -25,15 +25,20 @@ def main_game(a, b, user_name):
 
 
 if __name__ == '__main__':
+    # First just collecting all the info about players.
     a = int(input("Enter the lower element of range which you want to give: "))
     b = int(input("Enter the upper element of range: "))
     user1 = input("Enter the name of first player: ")
     user2 = input("Enter the name of second player: ")
+
+    # Getting both player's score.. By main_game function..
+
     print(f"\nNow first turn is of {user1}")
-    user1_trials = main_game(a, b, user1)
+    user1_trials = main_game(a, b, user1) 
     print(f"\nNow second turn is of {user2}")
     user2_trials = main_game(a, b, user2)
-
+    
+    # Comparing results..
     if user1_trials < user2_trials:
         print(f"{user1} wins by {user1_trials -  user2_trials} trials.")
         print(f"Congratulation {user1}")

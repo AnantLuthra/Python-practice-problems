@@ -10,6 +10,10 @@ for i in range(n):
     list2.append(x)
 list1 = []
 for i in list2:
+    i = str(i)
+    if i == i[::-1]:
+        i = int(i)
+        i += 1
     while True:
         i = str(i)
         b = i[::-1]

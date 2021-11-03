@@ -40,11 +40,11 @@ if __name__ == '__main__':
     
     # Comparing results..
     if user1_trials < user2_trials:
-        print(f"{user1} wins by {user1_trials -  user2_trials} trials.")
+        print(f"{user1} wins by {user2_trials -  user1_trials} trials.")
         print(f"Congratulation {user1}")
 
     elif user2_trials < user1_trials:
-        print(f"{user2} wins by {user2_trials -  user1_trials} trials.")
+        print(f"{user2} wins by {user1_trials -  user2_trials} trials.")
         print(f"Congratulation {user1}")
 
     elif user1_trials == user2_trials:

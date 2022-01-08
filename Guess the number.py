@@ -45,7 +45,7 @@ if __name__ == '__main__':
 
     elif user2_trials < user1_trials:
         print(f"{user2} wins by {user1_trials -  user2_trials} trials.")
-        print(f"Congratulation {user1}")
+        print(f"Congratulation {user2}")
 
     elif user1_trials == user2_trials:
         print(

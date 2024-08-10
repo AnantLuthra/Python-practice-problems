@@ -23,14 +23,16 @@ try:
     cursor.execute(query)
     
     for i in cursor.fetchall():
-        name = i[0].split(" ")
-        if len(name) == 1:
+        if " " in i[0]:
+            name = i[0].split(" ")
+            if len(name) == 1:
+                print(i[0])
+            elif len(name) == 2:
+                print(f"{name[0]} {name[1][0]}.")
+            elif len(name) == 3:
+                print(f"{name[0]} {name[1][0]}. {name[2][0]}.")
+        else:
             print(i[0])
-        elif len(name) == 2:
-            print(f"{name[0]} {name[1][0]}.")
-        elif len(name) == 3:
-            print(f"{name[0]} {name[1][0]}. {name[2][0]}.")
-        
     
     cursor.close()
     connection.close()
@@ -39,3 +41,6 @@ try:
 except (Exception, psycopg2.DatabaseError) as e:
     print(e)
         
+    
+    
+    
